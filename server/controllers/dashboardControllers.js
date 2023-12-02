@@ -10,7 +10,7 @@ exports.dashboardpage = async (req, res) => {
   
   const locals = {
       title: "Dashboard",
-      description: "Free NodeJS Notes App By Masuma.",
+      description: "Free NodeJS Notes App By Sayed Masuma.",
     }
 
     try {
