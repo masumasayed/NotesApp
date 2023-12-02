@@ -14,15 +14,18 @@ exports.dashboardpage = async (req, res) => {
     }
 
     try {
-      
+      const notes = await Note.find({})
+      res.render('dashboard/dash', {
+        userName: req.user.firstName,
+        locals,
+        notes,
+        layout: '../views/layouts/dashboard'
+      });
+ 
     } catch (error) {
       
     }
 
 
-    res.render('dashboard/dash', {
-      userName: req.user.firstName,
-      locals,
-      layout: '../views/layouts/dashboard'
-    });
+ 
    }
